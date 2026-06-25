@@ -2,18 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: task22-app
+
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: task22-app
+
   template:
     metadata:
       labels:
         app: task22-app
+
     spec:
       containers:
       - name: task22-app
-        image: nihal9074/jenkins-docker:v1
+        image: nihal9074/task22-app:v1
         ports:
         - containerPort: 5000
